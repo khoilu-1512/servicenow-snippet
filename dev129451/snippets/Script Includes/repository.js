@@ -34,6 +34,16 @@ Repository.prototype = {
         this.record.addEncodedQuery(query);
         return this;
     },
+
+    /**
+     * Add an limit to the result of the Repository's record.
+     * @param {number} limit - Number of records is limited.
+     * @returns {Repository} Returns the Repository instance for chaining.
+     */
+    setLimit: function(limit){
+        this.record.setLimit(limit);
+        return this;
+    },
 	
     /**
      * Paginate the list of records from
